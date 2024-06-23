@@ -77,7 +77,7 @@ if not table_exists:
     ''')
 
 # Read the CSV file into a pandas DataFrame
-df = pd.read_csv("C:\\Users\\Tanaka T Mlilo\\Downloads\\HEARTS.csv", header=0, sep=';')
+df = pd.read_csv("C:\\Users\\USER\\Downloads\\HEARTS.csv", header=0, sep=';')
 
 # Load the data from the DataFrame into the SQLite database
 df.to_sql('Health', conn, if_exists='replace', index=False)
@@ -88,7 +88,7 @@ df.to_sql('Health', conn, if_exists='replace', index=False)
 
 # Read the CSV file into a pandas DataFrame
 
-df = pd.read_csv("C:\\Users\\Tanaka T Mlilo\\Downloads\\HEARTS.csv", header=0, sep=';')
+df = pd.read_csv("C:\\Users\\USER\\Downloads\\HEARTS.csv", header=0, sep=';')
 df
 
 
@@ -347,7 +347,7 @@ model = Pipeline(steps=[('preprocessor', preprocessor),
 model.fit(X_train, y_train)
 
 # Save the model
-model_filename = r"C:\Users\Tanaka T Mlilo\Downloads\HEARTS.csv"
+model_filename = r"C:\Users\USERS\Downloads\HEARTS.csv"
 with open(model_filename, 'wb') as file:
     pickle.dump(model, file)
 
@@ -369,7 +369,7 @@ from sklearn.pipeline import Pipeline
 from sklearn.impute import SimpleImputer
 
 # Load the data
-file_path = r'C:\Users\Tanaka T Mlilo\Desktop\Honours\HEARTS.csv'
+file_path = r'C:\Users\USER\Downloads\HEARTS.csv'
 data = pd.read_csv(file_path, delimiter=';')
 
 # Display the first few rows of the dataset
@@ -462,7 +462,7 @@ from sklearn.metrics import accuracy_score
 import joblib
 
 # Load the data
-file_path = r'C:\Users\Tanaka T Mlilo\Desktop\Honours\HEARTS.csv'
+file_path = r'C:\Users\USER\Downloads\HEARTS.csv'
 data = pd.read_csv(file_path, delimiter=';')
 
 # Identify features and target
@@ -546,7 +546,7 @@ from sklearn.metrics import accuracy_score
 import joblib
 
 # Load the data
-file_path = r'C:\Users\Tanaka T Mlilo\Desktop\Honours\HEARTS.csv'
+file_path = r'C:\Users\USER\Downloads\HEARTS.csv'
 data = pd.read_csv(file_path, delimiter=';')
 
 # Identify features and target
@@ -592,7 +592,7 @@ accuracy = accuracy_score(y_test, y_pred)
 print(f'SVM Accuracy: {accuracy:.4f}')
 
 # Save the model to disk
-model_save_path = r'C:\Users\Tanaka T Mlilo\anaconda3\Lib\site-packages\streamlit\best_model.pkl'
+model_save_path = r'C:\Users\USER\anaconda3\Lib\site-packages\streamlit\best_model.pkl'
 joblib.dump(svm_pipeline, model_save_path)
 print(f'Model saved to {model_save_path}')
 
@@ -606,7 +606,7 @@ import numpy as np
 import pandas as pd
 
 # Load the trained model
-model = joblib.load('C:\\Users\\Tanaka T Mlilo\\anaconda3\\Lib\\site-packages\\streamlit\\best_model.pkl')
+model = joblib.load('C:\\Users\\USER\\anaconda3\\Lib\\site-packages\\streamlit\\best_model.pkl')
 
 # Define the app
 st.title('Heart Disease Prediction')
